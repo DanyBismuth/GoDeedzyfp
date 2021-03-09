@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h4>Number of challenge achieved {{ challenges_achieved }}</h4>
+
+<h3>Your challenge today</h3>
+
+{{ new_challenge }}
+
+<form action="{{ new_challenge.id }}">
+
+    <input type="submit" name="achieved_button" value="Challenge Completed">
+
+</form>
+
+<!--<form method="POST">-->
+<!--        {{ form.submit() }}-->
+<!--    </form>-->
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>You are doing good around you, look how amazing you are !</h1><br>
+
+ {% for deed in deeds %}
+        <li> {{ deed.challenge_text }} {{ deed.times_completed }}  </li>
+    {% endfor %}
+
+
+{% endblock %}
