@@ -1,4 +1,5 @@
 import flask_login
+import datetime
 import werkzeug
 
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -20,8 +21,10 @@ class User(db.Model, flask_login.UserMixin, ModelMixin):
     #
     # notifications = db.relationship("Notifications", backref="user")
     # daily_challenge = db.Column(db.DateTime(), nullable=True)
-    achieved_challenges = db.Column(db.Integer(), default = 0)
-
+    achieved_challenges = db.Column(db.Integer(), default=0)
+    last_login = db.Column(db.DateTime())
+    last_challenge = db.Column(db.String())
+    today_completed = db.Column(db.Boolean(), default=False)
 
     def __repr__(self):
         return '<Name %r>' % self.name

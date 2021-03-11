@@ -8,14 +8,22 @@
 
 {{ new_challenge }}
 
-<form action="{{ new_challenge.id }}">
+<!--<form action="{{ new_challenge.id }}">-->
 
-    <input type="submit" name="achieved_button" value="Challenge Completed">
+<!--    <input type="submit" name="achieved_button" value="Challenge Completed">-->
 
-</form>
+<!--</form>-->
 
 <!--<form method="POST">-->
 <!--        {{ form.submit() }}-->
 <!--    </form>-->
+
+
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+
+  <p><input class="completed-{{ completed }}" type=submit value='Challenge Completed'>
+</form>
+
 
 {% endblock %}

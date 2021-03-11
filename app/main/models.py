@@ -13,6 +13,7 @@ class Challenges(db.Model, ModelMixin):
 
     challenge_text = db.Column(db.String(500), nullable=False)
     times_completed = db.Column(db.Integer(), default=0)
+    checked = db.Column(db.Boolean(), default=True)
 
 
 

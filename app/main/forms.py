@@ -1,6 +1,6 @@
 import flask_wtf
 import wtforms
-from wtforms import validators as vld
+from wtforms import Form, IntegerField
 import string
 
 
@@ -15,5 +15,5 @@ class CompletedDeedsForm(flask_wtf.FlaskForm):
     submit = wtforms.SubmitField("Confirm")
 
 
-# class ChallengeCompleted(flask_wtf.FlaskForm):
-#     submit = wtforms.SubmitField("Challenge Completed")
+class ChallengeCompleted(Form):
+    submit = IntegerField("Challenge Completed")

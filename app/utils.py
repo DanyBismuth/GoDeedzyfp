@@ -12,6 +12,16 @@ from app import db, mail_manager
 # from app import mail_manager
 
 
+def send_email(subject, body, recipients):
+    msg = flask_mail.Message(
+        subject=subject,
+        body=body,
+        recipients=recipients.split(),
+        sender=flask.current_app.config["MAIL_USERNAME"],
+    )
+    print(flask.current_app.config["MAIL_USERNAME"])
+    mail_manager.send(msg)
+
 def send_mail(subject, body, recipients):
     msg = flask_mail.Message(
         subject=subject,
@@ -19,6 +29,7 @@ def send_mail(subject, body, recipients):
         recipients=recipients,
         sender=flask.current_app.config["MAIL_USERNAME"],
     )
+
     print(flask.current_app.config["MAIL_USERNAME"])
     mail_manager.send(msg)
 

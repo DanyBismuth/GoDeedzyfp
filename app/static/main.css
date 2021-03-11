@@ -4,15 +4,33 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
 }
+
+body > #bg {
+    height:100%;
+    width: 100%;
+    background-color: #26baee;
+    clip-path: polygon(100% 1%,100% 49%, 49% 99%,0 99%, 0 0);
+    position: absolute;
+    z-index: -1;
+}
 /*
  * Formatting the header area
  */
 .navbar {
-  background-color: #DFB887;
-  height: 80px;
+  background-color: #26baee;
+  height: 50px;
   width: 100%;
   opacity: .9;
   margin-bottom: 10px;
+}
+.brand {
+    color: black;
+    margin-top: -50px;
+}
+
+.nav-link {
+    color: black;
+    margin-top: -45px;
 }
 
 h2 {
@@ -27,15 +45,15 @@ h3 {
   margin-top: 30px;
   text-align: center;
   letter-spacing: -1px;
-  color: #999;
+  color: white;
 }
 
-h3 {
-  font-weight: 100;
+h4 {
+  font-weight: 70;
   margin-top: 30px;
   text-align: center;
   letter-spacing: -1px;
-  color: #999;
+  color: white;
 }
 
 img .homemage {
@@ -46,6 +64,29 @@ img .homemage {
     max-width: 400px;
 }
 
-ul {
-  list-style-type: none;
+ .listes {
+ float: left;
+ list-style-type:none;
+   }
+
+ .liste {
+ float: left;
+ list-style-type:none;
+   }
+
+.completed-True{
+    display: none;
+}
+
+.logo{
+    margin-top: -30px;
+
+}
+
+.success
+{
+    font-weight: 100;
+    font-size: 1.7em;
+  text-align: center;
+  color: yellow;
 }

@@ -5,8 +5,8 @@
     <form method="POST" action="/">
 
           {% for deed in deeds %}
-        <li>
-            <input type="checkbox" name="mygooddeeds" value= {{ deed.challenge_text }}>
+        <li classe="listes">
+            <input classe="checked-{{ checked }}" type="checkbox" name="mygooddeeds" value= {{ deed.challenge_text }}>
     {{ deed.challenge_text }}
     </input>
         </li>
